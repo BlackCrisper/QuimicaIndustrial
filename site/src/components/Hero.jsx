@@ -8,7 +8,9 @@ export default function Hero() {
       <div className="hero-media">
         <img
           src="/images/galeria/planta-industrial.jpg"
-          alt="Planta industrial atendida pela Química Maruim"
+          alt="Planta industrial atendida pela Química Maruim em Sergipe"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
       <div className="hero-overlay" />
@@ -21,7 +23,7 @@ export default function Hero() {
           Qualidade, confiabilidade e solidez desde {company.founded}.
         </p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href={whatsappUrl()} target="_blank" rel="noreferrer">
+          <a className="btn btn-primary" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
             Solicitar orçamento
           </a>
           <a className="btn btn-ghost" href="#servicos">

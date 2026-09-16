@@ -1,0 +1,17 @@
+{
+  "name": "Química Industrial e Serviços Maruim",
+  "short_name": "Química Maruim",
+  "lang": "pt-BR",
+  "description": "Obras civis, industriais, caldeiraria e montagem mecânica em Maruim/SE.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b1724",
+  "theme_color": "#0b1724",
+  "icons": [
+    {
+      "src": "/images/logo/logo.jpeg",
+      "type": "image/jpeg",
+      "sizes": "any"
+    }
+  ]
+}

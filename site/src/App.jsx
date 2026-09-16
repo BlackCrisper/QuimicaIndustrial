@@ -14,8 +14,11 @@ export default function App() {
 
   return (
     <>
+      <a className="skip-link" href="#conteudo">
+        Ir para o conteúdo
+      </a>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <main>
+      <main id="conteudo">
         <Hero />
         <Sobre />
         <Servicos />

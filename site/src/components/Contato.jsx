@@ -41,18 +41,18 @@ export default function Contato() {
 
         <div className="contato-grid">
           <div className="info-list">
-            <div>
+            <address>
               <h3>Endereço</h3>
               <p>
                 {company.address}
                 <br />
                 {company.city} · CEP {company.cep}
               </p>
-            </div>
+            </address>
             <div>
               <h3>WhatsApp</h3>
               <p>
-                <a href={whatsappUrl()} target="_blank" rel="noreferrer">
+                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
                   {company.phone}
                 </a>
               </p>
@@ -71,10 +71,26 @@ export default function Contato() {
 
           <form className="contact-form" onSubmit={onSubmit}>
             <label htmlFor="name">Nome</label>
-            <input id="name" name="name" value={form.name} onChange={onChange} required />
+            <input
+              id="name"
+              name="name"
+              autoComplete="name"
+              value={form.name}
+              onChange={onChange}
+              required
+            />
 
             <label htmlFor="phone">Telefone</label>
-            <input id="phone" name="phone" value={form.phone} onChange={onChange} required />
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              inputMode="tel"
+              value={form.phone}
+              onChange={onChange}
+              required
+            />
 
             <label htmlFor="service">Serviço</label>
             <select id="service" name="service" value={form.service} onChange={onChange}>

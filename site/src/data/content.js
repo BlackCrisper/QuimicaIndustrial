@@ -12,6 +12,14 @@ export const company = {
   logo: '/images/logo/logo.jpeg',
 }
 
+export const seo = {
+  siteUrl: 'https://quimicaindustrial.vercel.app',
+  title: 'Química Industrial e Serviços Maruim | Obras civis e industriais em Sergipe',
+  description:
+    'Obras civis, industriais, caldeiraria e montagem mecânica em Maruim/SE. Qualidade, confiabilidade e solidez desde 2018. Solicite um orçamento.',
+  ogImage: '/images/galeria/planta-industrial.jpg',
+}
+
 export const whatsappUrl = (message) => {
   const text = encodeURIComponent(
     message ||

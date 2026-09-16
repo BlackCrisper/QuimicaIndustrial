@@ -90,12 +90,13 @@ export default function Galeria() {
           Seleção de obras civis, industriais e de impermeabilização realizadas pela equipe.
         </p>
 
-        <div className="filters" role="tablist">
+        <div className="filters" role="group" aria-label="Filtrar galeria">
           {galleryFilters.map((item) => (
             <button
               key={item.id}
               type="button"
               className={filter === item.id ? 'is-active' : ''}
+              aria-pressed={filter === item.id}
               onClick={() => setFilter(item.id)}
             >
               {item.label}
@@ -142,9 +143,10 @@ export default function Galeria() {
                   className="carousel-slide"
                   key={item.src}
                   type="button"
+                  aria-label={`Ampliar foto: ${item.alt}`}
                   onClick={() => setLightbox(index)}
                 >
-                  <img src={item.src} alt={item.alt} />
+                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
                   <span>{item.label}</span>
                 </button>
               ))}
@@ -179,7 +181,13 @@ export default function Galeria() {
       </div>
 
       {current && (
-        <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setLightbox(null)}>
+        <div
+          className="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={current.alt}
+          onClick={() => setLightbox(null)}
+        >
           <button className="lightbox-close" type="button" aria-label="Fechar">
             ×
           </button>

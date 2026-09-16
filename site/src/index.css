@@ -26,6 +26,27 @@ html {
   scroll-behavior: smooth;
 }
 
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+address {
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -742,15 +763,44 @@ p {
 .site-footer {
   background: var(--navy);
   color: var(--muted);
-  padding: 28px 0;
+  padding: 40px 0 24px;
   font-size: 0.92rem;
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.footer-brand {
+  color: var(--white);
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.footer-grid nav,
+.footer-grid > div:last-child {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.footer-grid a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  color: var(--amber);
+}
+
+.footer-copy {
+  padding-top: 18px;
 }
 
 .whatsapp-float {
@@ -828,6 +878,10 @@ p {
 
   .hero-shape {
     display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
 

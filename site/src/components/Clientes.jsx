@@ -12,7 +12,7 @@ export default function Clientes() {
         <div className="client-grid">
           {clients.map((client) => (
             <article className="client-card" key={client.name}>
-              <img src={client.src} alt={client.name} />
+              <img src={client.src} alt={`Logo ${client.name}`} loading="lazy" decoding="async" />
             </article>
           ))}
         </div>
