@@ -220,12 +220,12 @@ export const galleryFilters = [
 ]
 
 export const clients = [
-  { name: 'Concrejato', src: '/images/clientes/concrejato.jpeg' },
-  { name: 'SISA — Sergipe Industrial', src: '/images/clientes/sisa.jpeg' },
-  { name: 'Rifertil Fertilizantes', src: '/images/clientes/rifertil.jpeg' },
-  { name: 'Usi Fértil Adubos', src: '/images/clientes/usi-fertil.jpeg' },
-  { name: 'Mizu Cimentos', src: '/images/clientes/mizu.jpeg' },
-  { name: 'BioSafra Brasil', src: '/images/clientes/biosafra.jpeg' },
-  { name: 'Indústrias Taquari', src: '/images/clientes/taquari.jpeg' },
-  { name: 'Sabe Alimentos', src: '/images/clientes/sabe.jpeg' },
+  { name: 'Concrejato', src: '/images/clientes/concrejato.png' },
+  { name: 'SISA — Sergipe Industrial', src: '/images/clientes/sisa.png' },
+  { name: 'Rifertil Fertilizantes', src: '/images/clientes/rifertil.png' },
+  { name: 'Usi Fértil Adubos', src: '/images/clientes/usi-fertil.png' },
+  { name: 'Mizu Cimentos', src: '/images/clientes/mizu.png' },
+  { name: 'BioSafra Brasil', src: '/images/clientes/biosafra.png' },
+  { name: 'Indústrias Taquari', src: '/images/clientes/taquari.png' },
+  { name: 'Sabe Alimentos', src: '/images/clientes/sabe.png' },
 ]
