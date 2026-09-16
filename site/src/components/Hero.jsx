@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="hero" id="inicio">
       <div className="hero-media">
         <img
-          src="/images/galeria/planta-industrial.jpg"
+          src="/images/galeria/hero.jpg"
           alt="Planta industrial atendida pela Química Maruim em Sergipe"
           fetchPriority="high"
           decoding="async"

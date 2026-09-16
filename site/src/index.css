@@ -307,8 +307,7 @@ p {
 
 .hero-media img {
   object-fit: cover;
-  object-position: center 55%;
-  transform: scale(1.22);
+  object-position: 72% 42%;
 }
 
 .hero-overlay {
@@ -395,10 +394,18 @@ p {
 
 .sobre-photo {
   position: relative;
-  min-height: 460px;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+}
+
+.sobre-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% 40%;
 }
 
 .sobre-photo::after {
@@ -908,16 +915,11 @@ p {
     height: 40px;
   }
 
-  .sobre-photo {
-    min-height: 320px;
-  }
-
   .brand-text span {
     display: none;
   }
 
   .hero-media img {
-    object-position: center 68%;
-    transform: scale(1.38);
+    object-position: 68% 38%;
   }
 }

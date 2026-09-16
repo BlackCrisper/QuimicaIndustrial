@@ -33,9 +33,8 @@ export default function Sobre() {
         </div>
         <div className="sobre-photo">
           <img
-            className="crop crop-top"
             src="/images/galeria/hero.jpg"
-            alt="Equipe da Química Maruim em manutenção industrial em Sergipe"
+            alt="Unidade industrial com caldeiraria e tubulação atendida pela Química Maruim"
             loading="lazy"
             decoding="async"
           />
