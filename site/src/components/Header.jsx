@@ -1,4 +1,4 @@
-import { company, navLinks, whatsappUrl } from '../data/content'
+import { company, navLinks } from '../data/content'
 
 export default function Header({ menuOpen, setMenuOpen }) {
   const close = () => setMenuOpen(false)
@@ -32,12 +32,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
               {link.label}
             </a>
           ))}
-          <a
-            className="btn btn-primary nav-cta"
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="btn btn-primary nav-cta" href="#contato" onClick={close}>
             Orçamento
           </a>
         </nav>

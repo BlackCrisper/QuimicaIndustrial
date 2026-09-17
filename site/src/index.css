@@ -163,18 +163,17 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.2);
 }
 
-.crop-top {
+.crop.crop-top {
   object-position: center 28%;
 }
 
-.crop-center {
+.crop.crop-center {
   object-position: center;
 }
 
-.crop-bottom-hide {
+.crop.crop-bottom-hide {
   object-position: center 22%;
 }
 
@@ -547,7 +546,7 @@ p {
 .carousel-slide {
   position: relative;
   flex: 0 0 calc((100cqi - (var(--visible) - 1) * var(--gap)) / var(--visible));
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 5;
   height: auto;
   overflow: hidden;
   border: 0;
@@ -561,7 +560,7 @@ p {
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 

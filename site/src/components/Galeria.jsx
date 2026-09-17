@@ -146,7 +146,13 @@ export default function Galeria() {
                   aria-label={`Ampliar foto: ${item.alt}`}
                   onClick={() => setLightbox(index)}
                 >
-                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+                  <img
+                    className={`crop crop-${item.crop}`}
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>{item.label}</span>
                 </button>
               ))}
