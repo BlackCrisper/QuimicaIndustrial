@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--navy);
 }
 
 .skip-link {
@@ -43,6 +44,90 @@ html {
   top: 12px;
 }
 
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--navy);
+  color: var(--white);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.loading-screen.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-card {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 8px;
+  width: min(320px, 100%);
+}
+
+.loading-card img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--navy-2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.loading-card strong {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.loading-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 6px;
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.loading-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--orange), var(--amber));
+  transition: width 0.25s ease;
+}
+
+.loading-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+body.is-booting .whatsapp-float {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen,
+  .loading-bar span {
+    transition: none;
+  }
+}
+
 address {
   font-style: normal;
 }
@@ -54,6 +139,10 @@ body {
   background: var(--paper);
   line-height: 1.55;
   overflow-x: hidden;
+}
+
+body.is-booting {
+  overflow: hidden;
 }
 
 img {

@@ -229,3 +229,10 @@ export const clients = [
   { name: 'Indústrias Taquari', src: '/images/clientes/taquari.png' },
   { name: 'Sabe Alimentos', src: '/images/clientes/sabe.png' },
 ]
+
+export const siteImages = [
+  company.logo,
+  seo.ogImage,
+  ...gallery.map((item) => item.src),
+  ...clients.map((client) => client.src),
+]
