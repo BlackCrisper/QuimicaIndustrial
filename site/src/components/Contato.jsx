@@ -3,7 +3,7 @@ import { company, whatsappUrl } from '../data/content'
 
 const initialForm = {
   name: '',
-  phone: '',
+  email: '',
   service: 'Civil',
   message: '',
 }
@@ -21,7 +21,7 @@ export default function Contato() {
     const text = [
       'Olá! Gostaria de um orçamento.',
       `Nome: ${form.name}`,
-      `Telefone: ${form.phone}`,
+      `E-mail: ${form.email}`,
       `Serviço: ${form.service}`,
       form.message ? `Mensagem: ${form.message}` : '',
     ]
@@ -80,14 +80,14 @@ export default function Contato() {
               required
             />
 
-            <label htmlFor="phone">Telefone</label>
+            <label htmlFor="email">E-mail</label>
             <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              inputMode="tel"
-              value={form.phone}
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              inputMode="email"
+              value={form.email}
               onChange={onChange}
               required
             />
